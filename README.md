@@ -1,68 +1,89 @@
 
-# Thyroid Disease Detection & Classification
+# Thyroid Disease Detection & Classification using Machine Learning
 
-A machine learning web application for classifying thyroid conditions based on patient clinical and laboratory data. The application is built with Python, Scikit-learn/XGBoost, and Streamlit.
+A machine learning project for detecting and classifying thyroid conditions using patient clinical and laboratory data. The project includes data preprocessing, exploratory data analysis, model training, evaluation, and an interactive web application developed using Streamlit.
 
 ## Project Overview
 
-This project focuses on predicting thyroid disease categories using machine learning. The workflow includes data preprocessing, exploratory data analysis, model training, evaluation, and deployment through an interactive Streamlit application.
+Thyroid disease classification involves analyzing multiple patient attributes, including medical history and thyroid hormone test results.
+
+In this project, machine learning techniques are applied to patient data to classify thyroid conditions. The trained model is integrated into a Streamlit application where users can enter patient information and obtain a predicted thyroid disease category.
 
 ## Key Features
 
 - Data cleaning and preprocessing
 - Exploratory Data Analysis (EDA)
-- Feature preparation for machine learning
+- Feature engineering and preparation
+- Machine learning model training and evaluation
 - Thyroid disease classification
-- Model evaluation using classification metrics
-- Trained model serialization using Pickle
-- Interactive prediction interface with Streamlit
-
-## Tech Stack
-
-**Languages & Libraries**
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- XGBoost
-- Matplotlib
-- Seaborn
-
-**Tools & Deployment**
-- Jupyter Notebook
-- Streamlit
-- Git & GitHub
-- Pickle
+- Trained model saved using Pickle
+- Interactive web application developed using Streamlit
 
 ## Dataset
 
-The dataset contains patient demographic, medical-history, and laboratory-test information.
+The dataset contains patient demographic information, medical history, and thyroid-related laboratory test results.
 
-Key features include:
+### Important Features
 
-`Age`, `Sex`, `On Thyroxine`, `Antithyroid Medication`, `Pregnancy`, `Thyroid Surgery`, `I131 Treatment`, `Goitre`, `Tumor`, `TSH`, `T3`, `TT4`, `T4U`, and `FTI`.
-
-The target variable represents thyroid disease categories.
+| Feature | Description |
+|---|---|
+| **Age** | Age of the patient |
+| **Sex** | Patient's sex |
+| **On Thyroxine** | Whether the patient is taking thyroxine medication |
+| **Query on Thyroxine** | Whether the patient has a query related to thyroxine |
+| **On Antithyroid Meds** | Whether the patient is taking antithyroid medication |
+| **Sick** | Whether the patient is currently sick |
+| **Pregnant** | Pregnancy status |
+| **Thyroid Surgery** | Whether the patient has undergone thyroid surgery |
+| **I131 Treatment** | Whether the patient has received I-131 treatment |
+| **Query Hypothyroid** | Whether the patient has a hypothyroidism-related query |
+| **Query Hyperthyroid** | Whether the patient has a hyperthyroidism-related query |
+| **Lithium** | Whether the patient is taking lithium |
+| **Goitre** | Presence of goitre |
+| **Tumor** | Presence of tumor |
+| **Hypopituitary** | Presence of hypopituitarism |
+| **Psych** | Presence of psychiatric condition |
+| **TSH** | Thyroid-stimulating hormone level |
+| **T3** | Triiodothyronine level |
+| **TT4** | Total thyroxine level |
+| **T4U** | Thyroxine utilization level |
+| **FTI** | Free thyroxine index |
 
 ## Machine Learning Workflow
 
 ```text
-Data Collection
-      ↓
+Dataset
+   ↓
 Data Cleaning & Preprocessing
-      ↓
+   ↓
 Exploratory Data Analysis
-      ↓
+   ↓
 Feature Preparation
-      ↓
+   ↓
 Model Training
-      ↓
+   ↓
 Model Evaluation
-      ↓
+   ↓
 Model Serialization
-      ↓
-Streamlit Deployment
+   ↓
+Streamlit Application
+   ↓
+Thyroid Disease Prediction
 ````
+
+## Technologies Used
+
+* **Python**
+* **Pandas**
+* **NumPy**
+* **Scikit-learn**
+* **XGBoost**
+* **Matplotlib**
+* **Seaborn**
+* **Jupyter Notebook**
+* **Streamlit**
+* **Pickle**
+* **Git & GitHub**
 
 ## Project Structure
 
@@ -86,32 +107,13 @@ thyroid-disease-detection-ml/
 
 ## Run Locally
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/aishpatilds-lang/thyroid-disease-detection-ml.git
-cd thyroid-disease-detection-ml
-```
-
-### 2. Create and activate a virtual environment
-
-```bash
-python -m venv venv
-```
-
-Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-### 3. Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the application
+### Run the Streamlit application
 
 ```bash
 streamlit run Streamlit_app.py
@@ -119,9 +121,9 @@ streamlit run Streamlit_app.py
 
 ## Model Development
 
-The complete model development workflow is available in `Model_Code.ipynb`, including preprocessing, training, and evaluation.
+The model development and training process is documented in `Model_Code.ipynb`.
 
-The trained model is stored in `model.pkl` and is used by the Streamlit application for prediction.
+The trained model is saved as `model.pkl` and used by `Streamlit_app.py` to generate predictions based on the entered patient information.
 
 ## Disclaimer
 
